@@ -1,0 +1,28 @@
+[package]
+name = "fontnorm"
+version = "0.1.0"
+edition = "2024"
+description = "Normalize and correct font metadata for .ttf and .otf files"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/yaoyorozu-hi/fontnorm"
+readme = "README.md"
+
+[[bin]]
+name = "fontnorm"
+path = "src/main.rs"
+
+[lib]
+name = "fontnorm"
+path = "src/lib.rs"
+
+[dependencies]
+read-fonts = "0.40.1"
+write-fonts = "0.49.1"
+font-types = "0.12.0"
+clap = { version = "4", features = ["derive"] }
+walkdir = "2"
+thiserror = "2"
+log = "0.4"
+env_logger = "0.11"
+
+[dev-dependencies]
